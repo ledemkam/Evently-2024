@@ -16,7 +16,7 @@ const NavItems = () => {
               isActive && "text-coral-500"
             } flex-center p-medium-16 whitespace-nowrap`}
           >
-            <Link href={link.label}>{link.label}</Link>
+            <Link href={link.route}>{link.label}</Link>
           </li>
         );
       })}
