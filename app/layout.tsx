@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "IsEvent",
-  description: "IsEvent ist das beste Event-Plattform",
+  title: "Evently",
+  description: "Evently is a platform for event management.",
   icons: {
     icon: "/assets/images/logo.svg",
   },
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body className={poppins.variable}>{children}</body>
       </html>
     </ClerkProvider>
   );

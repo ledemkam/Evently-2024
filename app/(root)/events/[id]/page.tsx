@@ -13,11 +13,13 @@ const EventDetails = async ({
   searchParams,
 }: SearchParamProps) => {
   const event = await getEventById(id);
+
   const relatedEvents = await getRelatedEventsByCategory({
     categoryId: event.category._id,
     eventId: event._id,
     page: searchParams.page as string,
   });
+
   return (
     <>
       <section className="flex justify-center bg-primary-50 bg-dotted-pattern bg-contain">
@@ -52,7 +54,9 @@ const EventDetails = async ({
                 </p>
               </div>
             </div>
+
             <CheckoutButton event={event} />
+
             <div className="flex flex-col gap-5">
               <div className="flex gap-2 md:gap-3">
                 <Image
@@ -85,7 +89,7 @@ const EventDetails = async ({
             </div>
 
             <div className="flex flex-col gap-2">
-              <p className="p-bold-20 text-grey-600">What You Will Learn:</p>
+              <p className="p-bold-20 text-grey-600">What You will Learn:</p>
               <p className="p-medium-16 lg:p-regular-18">{event.description}</p>
               <p className="p-medium-16 lg:p-regular-18 truncate text-primary-500 underline">
                 {event.url}
@@ -112,4 +116,5 @@ const EventDetails = async ({
     </>
   );
 };
+
 export default EventDetails;

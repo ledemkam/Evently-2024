@@ -1,6 +1,6 @@
-import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
+import { Separator } from "../ui/separator";
 import NavItems from "./NavItems";
 
 const MobileNav = () => {
@@ -30,4 +30,5 @@ const MobileNav = () => {
     </nav>
   );
 };
+
 export default MobileNav;
